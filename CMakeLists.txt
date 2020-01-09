@@ -10,7 +10,13 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/include
 )
 
-add_library(${PROJECT_NAME} SHARED src/util/Config.cpp src/camera/Camera.cpp)
+add_library(${PROJECT_NAME} SHARED
+        src/util/Config.cpp
+        src/camera/Camera.cpp
+        src/feature/Feature.cpp
+        src/frame/Frame.cpp
+        src/feature/OrbDetector.cpp
+        src/feature/Detector.cpp src/feature/Matcher.cpp)
 
 target_link_libraries(${PROJECT_NAME}
         ${OpenCV_LIBS})
