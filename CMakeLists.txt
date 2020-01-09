@@ -10,12 +10,15 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/include
 )
 
-add_library(${PROJECT_NAME} SHARED src/Config.cpp)
+add_library(${PROJECT_NAME} SHARED src/util/Config.cpp src/camera/Camera.cpp)
 
 target_link_libraries(${PROJECT_NAME}
         ${OpenCV_LIBS})
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/test/config)
-
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/test/config/bin)
 add_executable(test_config test/config/test_config.cpp)
 target_link_libraries(test_config ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/test/camera/bin)
+add_executable(test_camera test/camera/test_camera.cpp)
+target_link_libraries(test_camera ${PROJECT_NAME})

@@ -1,0 +1,17 @@
+%YAML:1.0
+
+#camera intrinsic
+Camera.k1:0.23
+Camera.k2:0.23
+Camera.k3:0.23
+Camera.p1:0.23
+Camera.p2:0.23
+
+#camera distortion
+Camera.fx:1
+Camera.fy:0.23232
+Camera.cx:0.4444
+Camera.cy:6.7777
+
+#camera frequency
+Camera.frequency:12

@@ -2,10 +2,10 @@
 // Created by ivip on 2020/1/8.
 //
 #include <iostream>
-#include "Config.h"
+#include "util/Config.h"
 
 using namespace std;
-using namespace myslam;
+using namespace mySlam;
 
 int main(int args , char ** arg){
     cout << "This is for test Config class" << endl;
