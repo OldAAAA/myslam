@@ -8,5 +8,9 @@ namespace mySlam{
     Matcher::Matcher(){
 
     }
+
+    double Matcher::match(cv::Mat &descriptor1, cv::Mat &descriptor2) {
+        return 0;
+    }
 }
 

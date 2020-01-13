@@ -2,9 +2,10 @@
 // Created by ivip on 2020/1/9.
 //
 
-#include "Feature/Feature.h"
+#include <opencv2/core/types.hpp>
+#include "feature/Feature.h"
 
 namespace mySlam{
-    Feature::Feature(int u, int v):u(u),v(v) {}
+    Feature::Feature(cv::Point2f point,cv::Mat descriptor):point(point),descriptor(descriptor) {}
 }
 
