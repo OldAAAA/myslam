@@ -3,14 +3,16 @@
 //
 
 #include "feature/Matcher.h"
+#include "system/System.h"
+
 
 namespace mySlam{
     Matcher::Matcher(){
 
     }
 
-    double Matcher::match(cv::Mat &descriptor1, cv::Mat &descriptor2) {
-        return 0;
+    std::vector<cv::DMatch> Matcher::match(cv::Mat &querydescriptor, cv::Mat &fitdescriptor) {
+        std::cout << "now in the interface" << std::endl;
     }
 }
 
