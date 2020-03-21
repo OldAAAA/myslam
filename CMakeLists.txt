@@ -18,14 +18,14 @@ add_library(${PROJECT_NAME} SHARED
         src/feature/Extractor.cpp
         src/feature/Matcher.cpp
         src/feature/OrbExtractor.cpp
-        src/util/ImageProcessor.cpp)
+        src/util/ImageProcessor.cpp
+        src/viewer/Viewer.cpp)
 
 target_link_libraries(${PROJECT_NAME}
         ${OpenCV_LIBS})
 
+#add_subdirectory("./test" "./test/bin")
 
-#下面是早期的测试编译，没有使用共享库
-###########################################################################
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/test/util/config/bin)
 add_executable(test_config test/util/config/test_config.cpp)
@@ -43,4 +43,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY test/feature/OrbExtractor/bin)
 add_executable(test_OrbExtractor test/feature/OrbExtractor/test_OrbExtractor.cpp)
 target_link_libraries(test_OrbExtractor ${PROJECT_NAME})
 
-###########################################################################
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY test/viewer/bin)
+add_executable(test_Viewer test/viewer/test_viewer.cpp)
+target_link_libraries(test_Viewer ${PROJECT_NAME})

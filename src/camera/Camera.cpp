@@ -25,6 +25,7 @@ namespace mySlam{
         try {
             image = cv::imread(image_path[currentIndex]);
             if(image.empty()){
+                cerr << "the current image path is:" << image_path[currentIndex] << endl;
                 cerr << "the path of the image is not right" << endl;
                 exit(1);
             }
@@ -74,5 +75,9 @@ namespace mySlam{
         currentIndex = 0;
 
         return true;
+    }
+
+    Camera::Camera() {
+
     }
 }

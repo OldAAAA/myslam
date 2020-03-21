@@ -43,6 +43,7 @@ namespace mySlam{
          * @paras frequency the frequency of the camera
          */
         Camera(string name, float fx, float fy, float cx, float cy, float k1, float k2, float k3, float p1, float p2, int frequency);
+        Camera();
 
         /*
          * read picture form the association file

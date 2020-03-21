@@ -31,17 +31,7 @@ int main(){
     while(true){
         cv::Mat image = camera.outputPiture();
         cv::imshow("tum1" , image);
-        cv::waitKey(10);
+        cv::waitKey(200);
     }
 
-    //test substring
-    string tempstring = "/home/ivip/jk/s.txt";
-    int location = tempstring.find_last_of('/');
-    string temp = tempstring.substr(0 , location);
-//    cout << temp << endl;
-
-
-
-
-    //output a image
 }
